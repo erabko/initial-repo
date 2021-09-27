@@ -48,4 +48,3 @@ console.log(String(b));
 var c = 1;
 console.log(Boolean(c));
 // expected output: true
-
