@@ -1,15 +1,15 @@
-function splitIntoIntegers(number, numberOfPieces) {
-    const resultArrayA = [];
+function splitIntoIntegers(number, pieces) {
+    const result = [];
     let sumOfPieces = 0;
-    for (let i = 0; i < numberOfPieces; i++) {
-        if (i === numberOfPieces - 1) {
-            resultArrayA.push(number - sumOfPieces);
+    for (let i = 0; i < pieces; i++) {
+        if (i === pieces - 1) {
+            result.push(number - sumOfPieces);
             break;
         }
         let piece = Math.round(Math.random() * (number - sumOfPieces));
-        resultArrayA.push(piece);
+        result.push(piece);
         sumOfPieces += piece;
     }
-    return resultArrayA;
+    return result;
 }
 console.log(splitIntoIntegers(15, 3));
